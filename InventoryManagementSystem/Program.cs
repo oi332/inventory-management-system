@@ -10,20 +10,7 @@ namespace InventoryManagementSystem
     {
         static void Main()
         {
-            var chair = new Chair("Four-legged Chair", 1299, 12, Color.Brown, Material.Wood);
-            var book = new Book("Clean Code", 2399, 15, "Robert C. Martin", 2008);
-            var pants = new Pants("H&M Jeans", 4566, 19, Size.M, Color.Blue, Material.Denim);
-            var shoes = new Shoes("Adidas Sneakers", 6999, 20, 40);
-            var pot = new Pot("Ikea Cooking Pot", 1299, 13, Material.Metal);
-
-            var inventory = new Inventory();
-
-            inventory.AddProduct(chair);
-            inventory.AddProduct(book);
-            inventory.AddProduct(pants);
-            inventory.AddProduct(shoes);
-            inventory.AddProduct(pot);
-
+            var inventory = new Inventory(SampleProducts.Products());
 
             Messages.Welcome();
             string menuOption;

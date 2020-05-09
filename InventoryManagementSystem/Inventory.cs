@@ -8,12 +8,18 @@ namespace InventoryManagementSystem
 {
     public class Inventory
     {
-        private readonly List<Product> Products = new List<Product>();
+        private readonly List<Product> Products;
         private readonly List<string> ProductTypes;
 
         public Inventory()
         {
+            Products = new List<Product>();
             ProductTypes = GetProductTypes();
+        }
+
+        public Inventory(List<Product> products)
+        {
+            Products = products;
         }
 
         public void AddProduct(Product product)
